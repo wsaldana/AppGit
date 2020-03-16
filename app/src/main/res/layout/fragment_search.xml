@@ -21,6 +21,7 @@
         android:layout_margin="10dp"
         android:background="#2196F3"
         android:text="BUSCAR"
+        android:onClick="searchUser"
         android:textColor="#FFFFFF" />
 
     <ImageView
@@ -47,6 +48,7 @@
         android:background="#2196F3"
         android:text="REPOSITORIOS"
         android:textColor="#FFFFFF"
+        android:onClick="viewRepos"
         android:visibility="invisible" />
 
 </LinearLayout>
