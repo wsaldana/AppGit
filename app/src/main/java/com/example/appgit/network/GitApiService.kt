@@ -7,6 +7,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import kotlinx.coroutines.Deferred
+import retrofit2.Call
+import retrofit2.http.PATCH
+import retrofit2.http.Path
 
 private const val BASE_URL = "https://api.github.com"
 
@@ -22,9 +25,8 @@ private val retrofit = Retrofit.Builder()
 
 interface GitApiService {
 
-    @GET("user")
-    fun getProperties():
-            Deferred<List<GitUser>>
+    @GET("/users/{username}")
+    fun getUser(@Path("username") username:String): Call<GitUser>
 }
 
 object GitApi {

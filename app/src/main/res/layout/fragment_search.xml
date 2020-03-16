@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.appgit.network.GitUser" />
+    </data>
+
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +30,6 @@
             android:layout_margin="10dp"
             android:background="#2196F3"
             android:text="BUSCAR"
-            android:onClick="searchUser"
             android:textColor="#FFFFFF" />
 
         <ImageView
@@ -31,7 +37,8 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_margin="20dp"
-            app:srcCompat="@android:color/transparent" />
+            android:scaleType="fitCenter"
+            android:src="@{viewModel.imgSrcUrl}"/>
 
         <TextView
             android:id="@+id/textView"
@@ -40,6 +47,7 @@
             android:layout_margin="10dp"
             android:textAlignment="center"
             android:textColor="#000000"
+            android:text="@{viewModel.login}"
             android:textSize="24sp" />
 
         <Button
