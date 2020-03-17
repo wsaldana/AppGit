@@ -59,6 +59,7 @@
             android:text="REPOSITORIOS"
             android:textColor="#FFFFFF"
             android:onClick="viewRepos"
+            android:visibility="gone"
              />
 
     </LinearLayout>

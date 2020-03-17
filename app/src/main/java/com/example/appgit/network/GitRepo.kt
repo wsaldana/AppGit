@@ -2,6 +2,6 @@ package com.example.appgit.network
 
 data class GitRepo (
     val id: String,
-    val nombre: String,
-    val descripcion: String
+    val name: String,
+    val description: String?
 )

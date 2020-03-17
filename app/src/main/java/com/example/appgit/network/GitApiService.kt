@@ -27,6 +27,9 @@ interface GitApiService {
 
     @GET("users/{username}")
     fun getUser(@Path("username") username:String): Call<GitUser>
+
+    @GET("users/{username}/repos")
+    fun getRepos(@Path("username") username: String): Call<List<GitRepo>>
 }
 
 object GitApi {

@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/repositoryFragment"
-        android:name="com.example.appgit.RepositoryFragment"
+        android:name="com.example.appgit.repository.RepositoryFragment"
         android:label="fragment_repository"
         tools:layout="@layout/fragment_repository" />
 </navigation>

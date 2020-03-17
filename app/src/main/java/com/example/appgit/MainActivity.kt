@@ -10,6 +10,8 @@ import com.example.appgit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    var n: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
