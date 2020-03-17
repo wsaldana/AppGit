@@ -1,10 +1,10 @@
 package com.example.appgit.network
 
 import com.squareup.moshi.Json
+import java.util.*
 
 data class GitUser(
-    val id: String,
-    @Json(name = "img_src") val imgSrcUrl: String,
+    @Json(name = "avatar_url") val avatar: String?,
     val login: String,
-    val repos_url: String
+    val id: String
 )

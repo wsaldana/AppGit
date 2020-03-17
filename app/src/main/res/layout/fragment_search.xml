@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.example.appgit.network.GitUser" />
+            type="com.example.appgit.search.SearchViewModel" />
     </data>
 
     <LinearLayout
@@ -38,7 +38,7 @@
             android:layout_height="250dp"
             android:layout_margin="20dp"
             android:scaleType="fitCenter"
-            android:src="@{viewModel.imgSrcUrl}"/>
+            android:src="@{viewModel.selectedUser.avatar}"/>
 
         <TextView
             android:id="@+id/textView"
@@ -47,7 +47,7 @@
             android:layout_margin="10dp"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:text="@{viewModel.login}"
+            android:text="@{viewModel.selectedUser.login}"
             android:textSize="24sp" />
 
         <Button

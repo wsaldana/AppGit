@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.http.PATCH
 import retrofit2.http.Path
 
-private const val BASE_URL = "https://api.github.com"
+private const val BASE_URL = "https://api.github.com/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -25,7 +25,7 @@ private val retrofit = Retrofit.Builder()
 
 interface GitApiService {
 
-    @GET("/users/{username}")
+    @GET("users/{username}")
     fun getUser(@Path("username") username:String): Call<GitUser>
 }
 
